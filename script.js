@@ -9,7 +9,7 @@ counters.forEach(counter => {
         const inc = target / speed
 
         if (count < target) {
-            counter.innerText = count + inc
+            counter.innerText = Math.ceil(count + inc) //it rounds up discrete values such as likes or followers
             setTimeout(updateCount, 1)  //this function runs the increment until it reachs the respective target
         } else {
             count.innerText = target
